@@ -42,22 +42,22 @@ public class QueryTesterController {
 	@FXML
 	private void initialize() {
 		mLoadingImageView = new ImageView(QueryTesterApplication.class
-				.getResource("view/assets/images/loading.gif").toString());
+				.getResource("assets/images/loading.gif").toString());
 		mLoadingImageView.setPreserveRatio(true);
 		mLoadingImageView.setFitWidth(30);
 
 		mStartImageView = new ImageView(QueryTesterApplication.class
-				.getResource("view/assets/images/start.png").toString());
+				.getResource("assets/images/start.png").toString());
 		mStartImageView.setPreserveRatio(true);
 		mStartImageView.setFitWidth(30);
 
 		mDisconnectedImageView = new ImageView(QueryTesterApplication.class
-				.getResource("view/assets/images/disconnected.png").toString());
+				.getResource("assets/images/disconnected.png").toString());
 		mDisconnectedImageView.setPreserveRatio(true);
 		mDisconnectedImageView.setFitWidth(30);
 
 		mConnectedImageView = new ImageView(QueryTesterApplication.class
-				.getResource("view/assets/images/connected.png").toString());
+				.getResource("assets/images/connected.png").toString());
 		mConnectedImageView.setPreserveRatio(true);
 		mConnectedImageView.setFitWidth(30);
 
