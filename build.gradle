@@ -14,11 +14,12 @@ repositories {
 
 javafx {
     version = "12"
-    modules = [ 'javafx.controls', 'javafx.fxml' ]
+    modules = ['javafx.controls', 'javafx.fxml']
 }
 
 mainClassName = 'com.inidamleader.querytester.QueryTesterApplication'
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
+    implementation group: 'org.hsqldb', name: 'hsqldb', version: '2.3.2'
 }
