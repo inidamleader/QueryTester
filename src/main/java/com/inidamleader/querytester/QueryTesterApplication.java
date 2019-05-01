@@ -9,25 +9,25 @@ import javafx.stage.Stage;
 
 public class QueryTesterApplication extends Application {
 
-    public static final String CONNECTION_CONFIG_FILE_NAME = "connection.config";
-    private static Stage sPrimaryStage;
+	public static final String CONNECTION_CONFIG_FILE_NAME = "src/main/resources/com/inidamleader/querytester/connection.config";
+	private static Stage sPrimaryStage;
 
-    public static void main(String[] args) {
-        launch(args);
-    }
+	public static void main(String[] args) {
+		launch(args);
+	}
 
-    public static Stage getPrimaryStage() {
-        return sPrimaryStage;
-    }
+	public static Stage getPrimaryStage() {
+		return sPrimaryStage;
+	}
 
-    @Override
-    public void start(Stage primaryStage) throws Exception {
-        sPrimaryStage = primaryStage;
-        Parent root = FXMLLoader.load(getClass().getResource("view/QueryTesterView.fxml"));
-        primaryStage.setTitle("Query Tester");
-        primaryStage.setScene(new Scene(root));
-        primaryStage.show();
-        ConnectionManager.setConnectionConfigFileName(CONNECTION_CONFIG_FILE_NAME);
-        ConnectionManager.loadParameters();
-    }
+	@Override
+	public void start(Stage primaryStage) throws Exception {
+		sPrimaryStage = primaryStage;
+		Parent root = FXMLLoader.load(getClass().getResource("view/QueryTesterView.fxml"));
+		primaryStage.setTitle("Query Tester");
+		primaryStage.setScene(new Scene(root));
+		primaryStage.show();
+		ConnectionManager.setConnectionConfigFileName(CONNECTION_CONFIG_FILE_NAME);
+		ConnectionManager.loadParameters();
+	}
 }
