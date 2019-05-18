@@ -90,18 +90,18 @@ public class ConnectionManager {
 		if (sConnection == null)
 			synchronized (ConnectionManager.class) {
 				if (sConnection == null) {
-						System.out.println("Trying initializing Connection");
-						String lUrl = sUrl + ":";
-						if (sHost.length() != 0) {
-							lUrl += "//" + sHost;
-							if (sPort.length() != 0)
-								lUrl += ":" + sPort;
-							lUrl += "/";
-						}
-						lUrl += sDatabase;
-						System.out.println(lUrl);
-						sConnection = DriverManager.getConnection(lUrl, sUser, sPassword);
-						System.out.println("Connection initialized");
+					System.out.println("Trying initializing Connection");
+					String lUrl = sUrl + ":";
+					if (sHost.length() != 0) {
+						lUrl += "//" + sHost;
+						if (sPort.length() != 0)
+							lUrl += ":" + sPort;
+						lUrl += "/";
+					}
+					lUrl += sDatabase;
+					System.out.println(lUrl);
+					sConnection = DriverManager.getConnection(lUrl, sUser, sPassword);
+					System.out.println("Connection initialized");
 				}
 			}
 		return sConnection;
