@@ -92,7 +92,6 @@ public class QueryTesterController {
 				pE.printStackTrace();
 			}
 			try {
-				// todo GUI updates
 				LocalTime lStartLocalTime = LocalTime.now();
 
 				if (mConnection == null)
